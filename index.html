@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: magenta;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+
+    .filters label {
+      padding: 10px 15px;
+      background: cyan;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .item {
+      width: 200px;
+      display: none;
+    }
+
+    .animals img {
+      width: 350px;
+      height: 250px;
+      border-radius: 5px;
+    }
+.scenary img {
+      width: 350px;
+      height: 250px;
+      border-radius: 5px;
+    }
+    .movies img {
+      width: 350px;
+      height: 250px;
+      border-radius: 5px;
+    }
+    #all:checked ~ .gallery .item,
+    #animals:checked ~ .gallery .animals,
+    #scenary:checked ~ .gallery .scenary,
+    #movies:checked ~ .gallery .movies, {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Portfolio</h1>
+
+  <input type="radio" name="filter" id="all" checked>
+  <input type="radio" name="filter" id="animals">
+  <input type="radio" name="filter" id="scanary">
+  <input type="radio" name="filter" id="movies">
+
+
+  <div class="filters">
+    <label for="all">All</label>
+    <label for="web">animals</label>
+    <label for="graphic">scenary</label>
+    <label for="photo">movies</label>
+  </div>
+  <div class="gallery">
+    <div class="animals">
+      <img src="elephant 2 .png" alt="animals 1">
+
+      <img src="lion .png" alt="animals 2">
+    </div>
+
+    <div class="scenary">
+      <img src="sunserpng.jpg" alt="scenary 1">
+
+      <img src="waterfall.png" alt="scenary 2">
+    </div>
+
+    <div class="movies">
+      <img src="robot.png" alt="movies 1">
+      <img src="avatar.png" alt="movies 2">
+    </div>
+  </div>
+
+</body>
+</html>
+
